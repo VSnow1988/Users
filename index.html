@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Users</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('form').submit(function(){
+		    $('table').append(
+            "<tr><td>" + $('#first').val(); + "</td><td>" + $('#last').val(); + "</td><td>" + $('#email').val(); + "</td><td>" + $('#phone').val(); + "</td></tr>"
+            );
+			return false;
+          });
+		  
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email Address</td>
+        <td>Contact #</td>
+      </tr>
+    </table>
+    <br><br>
+    <h1>Add User</h1>
+    <form action="process.php" method="post">
+      First Name: <input id="first" type="text" name="firstname" value="First Name"><br>
+      Last Name: <input id="last" type="text" name="lastname" value="Last Name"><br>
+      Email Address: <input id="email" type="email" name="email" value="Email Address"><br>
+      Contact No.: <input id="phone" type="text" name="phone" value="Phone #"><br><br>
+      <input type="submit" value="Add User"><br>
+    </form>
+  </body>
+</html>
