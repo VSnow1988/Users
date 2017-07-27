@@ -4,12 +4,12 @@
     <title>Users</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
     <script>
       $(document).ready(function(){
         $('form').submit(function(){
 		    $('table').append(
-            "<tr><td>" + $('#first').val(); + "</td><td>" + $('#last').val(); + "</td><td>" + $('#email').val(); + "</td><td>" + $('#phone').val(); + "</td></tr>"
+            "<tr><td>" + $('#first').val() + "</td><td>" + $('#last').val() + "</td><td>" + $('#email').val() + "</td><td>" + $('#phone').val() + "</td></tr>"
             );
 			return false;
           });
